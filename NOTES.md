@@ -67,6 +67,11 @@ Prolog will perform the following:
 - this completes the proof of the antecedant, since prolog has no more goals to prove, it concludes that the query is satisfiable with `X = b`.
 - Asking prolog for another unification will result in the goal engine backtracking to see whether there are any other valid instantiations of `X`, but it will soon find after exhausting the knowledge base that there are none.
 
+# Lists
+Lists can be decomposed into head and tail: `[Head|Tail] = [mia, some, more, items]`, which yields: `Head = mia.` and `Tail = [some, more, items].`. The empty list has no head or tail, it is a special construct.
+
+The pipe operator can split a list in any way you like, you can specify nested patterns to pull out items in a list.
+
 # Syntax
 - Lists: `[elem1, elem2, ...]`
 - Terminator: `.`
